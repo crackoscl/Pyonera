@@ -83,25 +83,23 @@ class myHandler(BaseHTTPRequestHandler):
             }
             self.wfile.write(render('contacto.html',context))
 
-        elif self.path == '/static/img/Putin.jpeg':
-            content, mime = get_static('static/img/Putin.jpeg')
+        elif self.path[0:7] == '/static':
+            content, mime = get_static(self.path[1:])
             self.send_response(200)
             self.send_header('Content-type',mime)
             self.end_headers()
             # Send the html message
             self.wfile.write(content)
         
-        elif self.path == '/static/css/style.css':
-            content, mime = get_static('static/css/style.css')
+        elif self.path[0:7] == '/static':
+            content, mime = get_static(self.path[1:])
             self.send_response(200)
             self.send_header('Content-type',mime)
             self.end_headers()
             # Send the html message
             self.wfile.write(content)
+    
         
-        
-            
-            
 server = HTTPServer(('', PORT), myHandler)
 print('Started httpserver on port ', PORT)
 
