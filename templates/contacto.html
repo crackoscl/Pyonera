@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <h1>contacto</h1>
+
+    
+    <ul class="container">
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/empresa">Empresa</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+    </ul>
+
+    <div class="container">
+        
+        <div class="row">
+            <form>
+                <fieldset>
+                  <legend>{titulo}</legend>
+                  <p>{direccion}</p>
+                  <hr>
+                  <label for="username">{nombre}</label>
+                  <input type="text" id="Username" placeholder="Nombre"/>
+                  <label for="username">{correo}</label>
+                  <input type="email" id="Correo" placeholder="Correo"/>
+                  <label for="username">{mensaje}</label>
+                  <input type="text" id="Mensaje" placeholder="Mensaje"/>
+                </fieldset>
+                <button class="tertiary">enviar</button>
+              </form>
+        </div>
+       
+    </div>
+
+    <footer class="container">
+        <p>Footer text</p>
+    </footer>
 </body>
 </html>
